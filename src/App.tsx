@@ -74,10 +74,7 @@ const data: TodoType[] = [
 function App() {
   const [Todos, setTodos] = useState<TodoType[]>(data); 
   
-  const deleteTodo = (id: number) => {
-    const updatedTodos = Todos.filter((todo) => todo.id !== id);
-    setTodos(updatedTodos);
-  };
+
   
 
   return (
