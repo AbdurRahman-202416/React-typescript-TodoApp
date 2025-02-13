@@ -72,15 +72,15 @@ const data: TodoType[] = [
 ];
 
 function App() {
-  const [Todos, setTodos] = useState<TodoType[]>(data); 
-  
+  const [Todos, setTodos] = useState<TodoType[]>(data);
 
-  
+  if (!Todos) {
+    setTodos(data);
+  }
 
   return (
     <>
       <Todo todos={Todos} />
-     
     </>
   );
 }
